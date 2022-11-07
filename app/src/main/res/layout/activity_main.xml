@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/notification_container_fl"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/badge_count_updater_np"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/notification_btn"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/white"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_notification_bell" />
+
+    </FrameLayout>
+
+    <NumberPicker
+        android:id="@+id/badge_count_updater_np"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/notification_container_fl"
+        app:layout_constraintTop_toTopOf="@id/notification_container_fl"
+        app:layout_constraintBottom_toBottomOf="@id/notification_container_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
